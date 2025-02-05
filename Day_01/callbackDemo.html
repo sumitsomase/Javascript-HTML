@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function rupali(maincourse, callback) {
+        console.log(maincourse, "is tasty");
+        callback("vanila");
+      }
+
+      function shriji(flavour) {
+        console.log(flavour, "icecream is tasty");
+      }
+
+      rupali("mutter paneer", shriji);
+
+      function add(a, b, callback) {
+        let c = a + b;
+        callback(c);
+      }
+
+      function display(result) {
+        console.log("addition of two number is :", result);
+      }
+
+      add(10, 20, display);
+
+
+    function city(cityname,callback){
+      console.log(cityname)
+      callback('pune')
+    }
+    function Other(cityresult){
+     console.log(cityresult);
+    }
+
+      city("Latur",Other)
+    </script>
+  </body>
+</html>

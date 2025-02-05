@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Name Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #one {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="collegeInput" placeholder="Enter your college name">
+    <button id="collegeButton">Submit</button>
+    <div id="one">College name will appear here...</div>
+
+    <script>
+        let buttonElement = document.getElementById("collegeButton");
+        let inputElement = document.getElementById("collegeInput");
+        let divElement = document.getElementById("one");
+
+        buttonElement.addEventListener("click", function() {
+            let collegeName = inputElement.value.trim();
+
+            if (collegeName === "") {
+                divElement.textContent = "Please enter a valid college name!";
+                divElement.style.color = "red";
+            } else {
+                divElement.textContent = `Your College Name: ${collegeName}`;
+                divElement.style.color = "#333"; 
+            }
+        });
+    </script>
+
+</body>
+</html>

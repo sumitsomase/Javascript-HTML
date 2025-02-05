@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id="one" class="hlw">hlw</h1>
+    <h1 id="two" class="hlw">sumit</h1>
+    <h1 id="three" class="hlw">somase</h1>
+
+    <script>
+      let htmlElement = document.getElementById("one");
+
+      htmlElement.innerHTML = "Apple";
+
+      let htmlelementone = document.getElementsByClassName("hlw");
+     
+
+      for (let i = 0; i < htmlelementone.length; i++) {
+        htmlelementone[i].innerHTML = "banana";
+      }
+
+      for (let h of htmlelementone) {
+        h.innerHTML = "Mango";
+      }
+
+      Array.from(htmlelementone).forEach((h) => {
+        h.innerHTML = "fruits";
+      });
+
+      cars=["audi","BMW","Merc"]
+      cars.forEach((car)=>{
+        console.log('I like',car);
+      })
+    </script>
+  </body>
+</html>

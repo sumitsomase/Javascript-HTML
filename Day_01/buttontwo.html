@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showCollege()">Want to see my college name?</button>
+    <button onkeypress="showCity(event)">Want to see my City name?</button>
+    <div id="one">
+    college name loading....
+    </div>
+</body>
+
+<script>
+    function showCollege(){
+    let divElement=document.getElementById("one");
+    divElement.innerHTML="MS Bidve Engineering College ";
+    divElement.style.color="red"
+    }
+
+    function showCity(event){
+        if(event.key==='Enter'){
+    let divElement=document.getElementById("one");
+    divElement.innerHTML="Pune";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myCars{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Goa, Singham!</h1>
+    <div id="myCars"></div>
+
+    <script>
+        let cars = ["Audi", "BMW", "Mercedes", "Tesla"];
+        let olElement = document.createElement("ol");
+
+        for (let i = 0; i < cars.length; i++) {
+            let liElement = document.createElement("li");
+            liElement.textContent = cars[i];
+            olElement.appendChild(liElement);
+        }
+
+        let divCarElement = document.getElementById("myCars");
+        divCarElement.appendChild(olElement);
+    </script>
+</body>
+</html>
