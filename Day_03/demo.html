@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h2>Search for a Car</h2>
+    <input type="text" id="carInput" placeholder="Enter car name">
+    <button onclick="checkCar()">Check Availability</button>
+    <p id="result"></p>
+
+    <script>
+        let cars = ["audi", "bmw", "honda", "mahindra", "merc", "maruti"];
+
+        function checkCar() {
+            let userInput = document.getElementById("carInput").value.toLowerCase();
+            let resultText = document.getElementById("result");
+
+            if (userInput === "") {
+                resultText.innerHTML = "Please enter a car name.";
+                resultText.style.color = "red";
+                return;
+            }
+
+            if (cars.includes(userInput)) {
+                resultText.innerHTML = userInput.toUpperCase() + " is available!";
+                resultText.style.color = "green";
+            } else {
+                resultText.innerHTML = userInput.toUpperCase() + " is NOT available!";
+                resultText.style.color = "red";
+            }
+        }
+    </script>
+
+    
+
+
+</body>
+</html>

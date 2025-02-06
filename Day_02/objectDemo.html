@@ -1,53 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
-
+  </head>
+  <body>
     <script>
+      player1 = {
+        name: "virat",
+        age: 45,
+        mp: 100,
+        ms: 1000,
+        fun: function apple() {
+          console.log("hey apple");
+          console.log(this.age * this.mp);
+          console.log(
+            `my name is ${this.name} and my age is ${this.age} i have played ${this.mp}`
+          );
+        },
+      };
 
-   player1={
-    name :"virat",
-    age  : 45,
-    mp   :100,
-    ms   : 1000,
-    fun  : function apple(){
-        console.log("hey apple");
-        console.log(this.age * this.mp);
-        console.log(`my name is ${this.name} and my age is ${this.age} i have played ${this.mp}`)
-    }
+      console.log(player1);
 
-   }
+      console.log(`name type is ${typeof player1.name}`);
 
-   console.log(player1);
-   
+      console.log(`${player1.name}`);
 
-   console.log(`name type is ${typeof player1.name}`);
+      player1.fun();
 
-   console.log(`${player1.name}`)
+      for (let key in player1) {
+        console.log(key, player1[key]);
+      }
 
-   player1.fun();
+      viratKohali = {
+        statues: "married",
+        wifeName: "Anushka",
+      };
 
-
-   for(let key in player1){
-    console.log(key ,player1[key]);
-    
-   }
-
-
-   viratKohali={
-    statues : "married",
-    wifeName : "Anushka"
-   }
-
-
-   console.log(typeof viratKohali);
-
+      console.log(typeof viratKohali);
     </script>
-    
-</body>
+  </body>
 </html>

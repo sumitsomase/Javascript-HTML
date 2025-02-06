@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="user"></h1>
+
+
+    <script>
+
+        const loginInfo={
+
+            email:"sumitsomase65@gmail.com",
+            userName:"sumit somase",
+            password: 12345678,
+            age    : 22,
+            position:"Frontend dev"
+
+        }
+
+       let htmlElement=document.getElementById("user");
+       htmlElement.innerHTML=`user email id is : ${loginInfo.email}` ;
+
+
+    </script>
+</body>
+</html>

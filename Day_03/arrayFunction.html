@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Search</title>
+</head>
+<body>
+
+    <script>
+        
+        let cars = ["audi", "bmw", "honda", "mahindra", "merc", "maruti"];
+
+        
+        let userInput = prompt("Enter a car name to search:").toLowerCase(); 
+
+        
+        if (cars.includes(userInput)) {
+            alert(userInput + " is available in the list!");
+        } else {
+            alert(userInput + " is NOT available in the list!");
+        }
+
+
+        //settimeout
+        //setinterval
+    </script>
+    
+</body>
+</html>
