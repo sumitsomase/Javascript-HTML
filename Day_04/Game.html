@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button
+      onclick="
+    let divCounterElement = document.querySelector('#counter');
+    if (parseInt(divCounterElement.innerHTML) <= 4) {
+        divCounterElement.innerHTML = parseInt(divCounterElement.innerHTML) + 1;
+    }
+"
+    >
+      Increment By 1
+    </button>
+
+    <button onclick="incrementFunction()">click me</button>
+
+    <div id="counter">0</div>
+    <button onclick="Apple()">Apple List</button>
+    <h1 id="appleId"></h1>
+
+    <script>
+      function incrementFunction() {
+        let clickmeElemet = document.getElementById("counter");
+
+        if (parseInt(clickmeElemet.innerHTML) <= 10) {
+          clickmeElemet.innerHTML = parseInt(clickmeElemet.innerHTML) + 2;
+          clickmeElemet.style.marginTop = "20px";
+          clickmeElemet.style.color = "blue";
+        } else {
+          clickmeElemet.innerHTML = "Stop Brother";
+          clickmeElemet.style.color = "red";
+        }
+      }
+
+      function Apple() {
+        let appleElement = document.getElementById("appleId");
+
+        appleElement.innerHTML = ["Red Apple", "Black Apple", "Green Apple"];
+
+       appleElement.style.backgroundColor="red";
+
+
+      
+      }
+    </script>
+  </body>
+</html>
